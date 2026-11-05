@@ -27,3 +27,25 @@ test('Should fill all the fields of the form', async ({ page }) => {
 
     await expect(page.locator('.banner')).toBeVisible();
 });
+
+// Partie 5 - étape 1  data-testid
+test('Should submit the form using data-testid selectors', async ({ page }) => {
+    await page.goto('http://localhost:3000');
+
+    await page.locator('[data-testid="lastname"]').fill('DC');
+    await page.locator('[data-testid="firstname"]').fill('Timéo');
+
+    await page.locator('[data-testid="ue1"]').fill('16');
+    await page.locator('[data-testid="ue2"]').fill('12');
+    await page.locator('[data-testid="ue3"]').fill('18');
+    await page.locator('[data-testid="ue4"]').fill('13');
+    await page.locator('[data-testid="ue5"]').fill('10');
+
+    await page.locator('[data-testid="parcours"]').selectOption('dev');
+
+    await page.locator('[data-testid="portfolio"]').fill('https://mon-portfolio.fr');
+
+    await page.locator('[data-testid="submit"]').click();
+
+    await expect(page.locator('[data-testid="banner"]')).toBeVisible();
+});

@@ -1,4 +1,4 @@
-const banner = document.querySelector(".banner")
+const banner = document.querySelector("[data-testid=\"banner\"]")
 
 const routeFullName = {
     "dev": "développement web et dispositifs interactifs",
@@ -17,7 +17,8 @@ document
 
         console.log("--------- form's values ---------")
         console.log(JSON.stringify(formValues))
-        console.log(document.querySelector("input[type=\"file\"]")?.files[0]?.name)
+        console.log(document.querySelector("[data-file]")
+)
         console.log("------------------------------------")
 
         banner.querySelector('p').innerHTML = bannerTextTpl.replace(
@@ -25,7 +26,7 @@ document
             routeFullName[formValues.parcours]
         )
         banner.classList.remove("hidden")
-        document.querySelector('a').inert = false;
+        document.querySelector('[data-reselect-link]').inert = false;
 
         // e.target.elements contient tous les champs du formulaire
         Array.from(e.target.elements)

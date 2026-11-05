@@ -15,7 +15,7 @@
     <script src="form.js" defer></script>
 </head>
 <body class="p-4">
-    <section class="hidden p-4 bg-green-100 banner mb-4 rounded-xl">
+    <section class="hidden p-4 bg-green-100 banner mb-4 rounded-xl" data-testid="banner">
         <p class="text-center text-xl">Choix du parcours <span class="font-bold">__route_placeholder__</span> validé</p>
     </section>
 
@@ -37,37 +37,37 @@
 
     <form action="" method="get" class="max-w-screen-lg" data-form>
         <section class="mb-3">
-            <label for="lastname" class="block">Nom <span class="text-red-500">*</span> :</label>
+            <label for="lastname" class="block">Nom <span class="text-red-500" 	data-testid="lastname">*</span> :</label>
             <input type="text" id="lastname" name="lastname" required class="w-1/2">
         </section>
         <section class="mb-3">
-            <label for="firstname" class="block">Prénom <span class="text-red-500">*</span> :</label>
+            <label for="firstname" class="block">Prénom <span class="text-red-500" data-testid="firstname">*</span> :</label>
             <input type="text" id="firstname" name="firstname" required class="w-1/2">
         </section>
         <section class="flex gap-x-4 flex-wrap">
             <section class="mb-3">
-                <label for="ue1" class="block">Moyenne UE1 <span class="text-red-500">*</span> :</label>
+                <label for="ue1" class="block" data-testid="ue1">Moyenne UE1 <span class="text-red-500">*</span> :</label>
                 <input type="number" min="0" max="20" step="0.01" id="ue1" name="ue1" class="inert:opacity-50" required>
             </section>
             <section class="mb-3">
-                <label for="ue2" class="block">Moyenne UE2 <span class="text-red-500">*</span> :</label>
+                <label for="ue2" class="block" data-testid="ue2">Moyenne UE2 <span class="text-red-500">*</span> :</label>
                 <input type="number" min="0" max="20" step="0.01" id="ue2" name="ue2" class="inert:opacity-50" required>
             </section>
             <section class="mb-3">
-                <label for="ue3" class="block">Moyenne UE3 <span class="text-red-500">*</span> :</label>
+                <label for="ue3" class="block" data-testid="ue3">Moyenne UE3 <span class="text-red-500">*</span> :</label>
                 <input type="number" min="0" max="20" step="0.01" id="ue3" name="ue3" class="inert:opacity-50" required>
             </section class="mb-3">
             <section>
-                <label for="ue4" class="block">Moyenne UE4 <span class="text-red-500">*</span> :</label>
+                <label for="ue4" class="block" data-testid="ue4">Moyenne UE4 <span class="text-red-500">*</span> :</label>
                 <input type="number" min="0" max="20" step="0.01" id="ue4" name="ue4" class="inert:opacity-50" required>
             </section>
             <section class="mb-3">
-                <label for="ue5" class="block">Moyenne UE5 <span class="text-red-500">*</span> :</label>
+                <label for="ue5" class="block" data-testid="ue5">Moyenne UE5 <span class="text-red-500">*</span> :</label>
                 <input type="number" min="0" max="20" step="0.01" id="ue5" name="ue5" class="inert:opacity-50" required>
             </section>
         </section>
         <section class="mb-3">
-            <label for="parcours" class="block">Choix parcours <span class="text-red-500">*</span> :</label>
+            <label for="parcours" class="block" data-testid="parcours">Choix parcours <span class="text-red-500">*</span> :</label>
             <select class="inert:opacity-50" required name="parcours" id="parcours">
                 <option value="">Veuillez sélectionner un parcours</option>
                 <option value="dev">Parcours développement web et dispositifs interactifs</option>
@@ -76,12 +76,12 @@
             </select>
         </section>
         <section class="mb-3">
-            <label for="portfolio" class="block">Lien portfolio :</label>
+            <label for="portfolio" class="block" data-testid="portfolio">Lien portfolio :</label>
             <input type="url" id="portfolio" name="portfolio" class="w-1/2">
         </section>
 
         <section class="flex justify-start gap-x-3">
-            <button type="submit" class="inert:opacity-50 px-4 py-2 font-semibold text-l focus:bg-cyan-700 hover:bg-cyan-700 bg-cyan-500 text-white rounded-full shadow-sm">Envoyer</button>
+            <button type="submit" class="inert:opacity-50 px-4 py-2 font-semibold text-l focus:bg-cyan-700 hover:bg-cyan-700 bg-cyan-500 text-white rounded-full shadow-sm" data-testid="submit">Envoyer</button>
             <button type="reset" class="inert:opacity-50 px-4 py-2 font-semibold text-l focus:bg-red-700 hover:bg-red-700 bg-red-500 text-white rounded-full shadow-sm">Annuler</button>
             <a href="" inert class="px-4 py-2 font-semibold text-l focus:bg-green-700 hover:bg-green-700 bg-green-500 text-white rounded-full shadow-sm ml-auto" data-reselect-link>Rechoisir</a>
         </section>
