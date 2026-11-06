@@ -37,38 +37,38 @@
 
     <form action="" method="get" class="max-w-screen-lg" data-form>
         <section class="mb-3">
-            <label for="lastname" class="block">Nom <span class="text-red-500" 	data-testid="lastname">*</span> :</label>
-            <input type="text" id="lastname" name="lastname" required class="w-1/2">
+            <label for="lastname" class="block">Nom <span class="text-red-500">*</span> :</label>
+            <input type="text" id="lastname" name="lastname" required class="w-1/2" data-testid="lastname">
         </section>
         <section class="mb-3">
-            <label for="firstname" class="block">Prénom <span class="text-red-500" data-testid="firstname">*</span> :</label>
-            <input type="text" id="firstname" name="firstname" required class="w-1/2">
+            <label for="firstname" class="block">Prénom <span class="text-red-500">*</span> :</label>
+            <input type="text" id="firstname" name="firstname" required class="w-1/2" data-testid="firstname">
         </section>
         <section class="flex gap-x-4 flex-wrap">
             <section class="mb-3">
-                <label for="ue1" class="block" data-testid="ue1">Moyenne UE1 <span class="text-red-500">*</span> :</label>
-                <input type="number" min="0" max="20" step="0.01" id="ue1" name="ue1" class="inert:opacity-50" required>
+                <label for="ue1" class="block">Moyenne UE1 <span class="text-red-500">*</span> :</label>
+                <input type="number" min="0" max="20" step="0.01" id="ue1" name="ue1" class="inert:opacity-50" required data-testid="ue1">
             </section>
             <section class="mb-3">
-                <label for="ue2" class="block" data-testid="ue2">Moyenne UE2 <span class="text-red-500">*</span> :</label>
-                <input type="number" min="0" max="20" step="0.01" id="ue2" name="ue2" class="inert:opacity-50" required>
+                <label for="ue2" class="block">Moyenne UE2 <span class="text-red-500">*</span> :</label>
+                <input type="number" min="0" max="20" step="0.01" id="ue2" name="ue2" class="inert:opacity-50" required data-testid="ue2">
             </section>
             <section class="mb-3">
-                <label for="ue3" class="block" data-testid="ue3">Moyenne UE3 <span class="text-red-500">*</span> :</label>
-                <input type="number" min="0" max="20" step="0.01" id="ue3" name="ue3" class="inert:opacity-50" required>
-            </section class="mb-3">
-            <section>
-                <label for="ue4" class="block" data-testid="ue4">Moyenne UE4 <span class="text-red-500">*</span> :</label>
-                <input type="number" min="0" max="20" step="0.01" id="ue4" name="ue4" class="inert:opacity-50" required>
+                <label for="ue3" class="block">Moyenne UE3 <span class="text-red-500">*</span> :</label>
+                <input type="number" min="0" max="20" step="0.01" id="ue3" name="ue3" class="inert:opacity-50" required data-testid="ue3">
             </section>
             <section class="mb-3">
-                <label for="ue5" class="block" data-testid="ue5">Moyenne UE5 <span class="text-red-500">*</span> :</label>
-                <input type="number" min="0" max="20" step="0.01" id="ue5" name="ue5" class="inert:opacity-50" required>
+                <label for="ue4" class="block">Moyenne UE4 <span class="text-red-500">*</span> :</label>
+                <input type="number" min="0" max="20" step="0.01" id="ue4" name="ue4" class="inert:opacity-50" required data-testid="ue4">
+            </section>
+            <section class="mb-3">
+                <label for="ue5" class="block">Moyenne UE5 <span class="text-red-500">*</span> :</label>
+                <input type="number" min="0" max="20" step="0.01" id="ue5" name="ue5" class="inert:opacity-50" required data-testid="ue5">
             </section>
         </section>
         <section class="mb-3">
-            <label for="parcours" class="block" data-testid="parcours">Choix parcours <span class="text-red-500">*</span> :</label>
-            <select class="inert:opacity-50" required name="parcours" id="parcours">
+            <label for="parcours" class="block">Choix parcours <span class="text-red-500">*</span> :</label>
+            <select class="inert:opacity-50" required name="parcours" id="parcours" data-testid="parcours">
                 <option value="">Veuillez sélectionner un parcours</option>
                 <option value="dev">Parcours développement web et dispositifs interactifs</option>
                 <option value="crea">Parcours création numérique</option>
@@ -76,8 +76,8 @@
             </select>
         </section>
         <section class="mb-3">
-            <label for="portfolio" class="block" data-testid="portfolio">Lien portfolio :</label>
-            <input type="url" id="portfolio" name="portfolio" class="w-1/2">
+            <label for="portfolio" class="block">Lien portfolio :</label>
+            <input type="url" id="portfolio" name="portfolio" class="w-1/2" data-testid="portfolio">
         </section>
 
         <section class="flex justify-start gap-x-3">
