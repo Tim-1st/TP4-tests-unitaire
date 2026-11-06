@@ -76,6 +76,10 @@
             </select>
         </section>
         <section class="mb-3">
+                <label for="picture" class="block">Photo de profil :</label>
+                <input type="file" id="picture" name="picture" accept="image/*" data-file data-testid="picture">
+        </section>
+        <section class="mb-3">
             <label for="portfolio" class="block">Lien portfolio :</label>
             <input type="url" id="portfolio" name="portfolio" class="w-1/2" data-testid="portfolio">
         </section>
@@ -86,6 +90,18 @@
             <a href="" inert class="px-4 py-2 font-semibold text-l focus:bg-green-700 hover:bg-green-700 bg-green-500 text-white rounded-full shadow-sm ml-auto" data-reselect-link>Rechoisir</a>
         </section>
     </form>
+
+    <!-- Partie 7 liste des jours fériés -->
+    <section class="mt-6">
+        <h2 class="text-2xl font-bold mb-2">Prochains jours fériés</h2>
+        <ul data-holidays-list></ul>
+
+        <template data-holiday-template>
+            <li data-holiday-item>
+                <span data-holiday-date></span> : <span data-holiday-name></span>
+            </li>
+        </template>
+    </section>
     <p class="mt-4">
         <a href="www.cyu.fr" class="underline hover:no-underline">Site de l'université</a>
     </p>

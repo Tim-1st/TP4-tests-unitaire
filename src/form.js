@@ -26,6 +26,7 @@ document
             routeFullName[formValues.parcours]
         )
         banner.classList.remove("hidden")
+        document.cookie = `parcours=${formValues.parcours}; path=/`;
         document.querySelector('[data-reselect-link]').inert = false;
 
         // e.target.elements contient tous les champs du formulaire
@@ -34,3 +35,21 @@ document
                 item.inert = true;
         })
 })
+
+// Partie 7 afficher les jours fériés de l'API
+const holidaysList = document.querySelector("[data-holidays-list]");
+const holidayTemplate = document.querySelector("[data-holiday-template]");
+
+const loadHolidays = async () => {
+    const response = await fetch("/api");
+    const holidays = await response.json();
+
+    holidays.forEach((holiday) => {
+        const clone = holidayTemplate.content.cloneNode(true);
+        clone.querySelector("[data-holiday-date]").textContent = holiday.date;
+        clone.querySelector("[data-holiday-name]").textContent = holiday.name;
+        holidaysList.append(clone);
+    });
+};
+
+loadHolidays();
